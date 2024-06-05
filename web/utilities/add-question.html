@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	[[meta]]
+	
+	<title>Add Question</title>
+
+	<link rel="stylesheet" href="/res/stylesheets/main.css">
+
+	<script src="/res/scripts/add-question.js"></script>
+</head>
+<body>
+	<div class="hero is-fullheight">
+		<div class="hero-body">
+			<div class="column box is-offset-4 is-4">
+				<div class="has-text-centered p-4">
+					<h1 class="title is-size-1 m-0 mb-2" id="heading">
+						Add Question
+					</h1>
+					<h2 class="subtitle is-size-6 m-0" id="description">
+						Add a question to a subject.
+					</h2>
+					<div class="p-4 my-4" id="data"></div>
+					<button class="button is-success" id="next-button" onclick="next_step(this);">
+						<span class="is-size-5 is-flex is-vcentered">
+							Start
+						</span>
+						<div class="ml-1 icon is-flex is-vcentered is-small">
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		load();
+	</script>
+</body>
+</html>

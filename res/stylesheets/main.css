@@ -1,0 +1,20 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+::-webkit-scrollbar {
+	height: 0.25rem;
+	width: 0.25rem;
+	background: transparent;
+}
+
+::-webkit-scrollbar-track {
+	background: #dbdbdb;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c8c8c8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #b9b9b9;
+}
+

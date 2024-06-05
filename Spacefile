@@ -1,0 +1,10 @@
+v: 0
+icon: res/icons/P4E.png
+app_name: "P4E"
+micros:
+  - name: "p4e"
+    src: .
+    engine: python3.9
+    dev: python main.py
+    public_routes:
+      - "/*"

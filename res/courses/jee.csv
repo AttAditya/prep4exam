@@ -1,0 +1,6 @@
+p0+p1,&,20,20,objective,100,100
+c0+c1,&,20,20,objective,100,100
+m0+m1,&,20,20,objective,100,100
+p0+p1,&,10,5,subjective,100,100
+c0+c1,&,10,5,subjective,100,100
+m0+m1,&,10,5,subjective,100,100

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	[[meta]]
+	
+	<title>Exam Results</title>
+
+	<link rel="stylesheet" href="/res/stylesheets/main.css">
+	<link rel="stylesheet" href="/res/stylesheets/extenstions.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="/res/scripts/results-page.js"></script>
+</head>
+<body>
+	<div class="pageloader is-link is-active" id="loading-screen">
+		<span class="title is-size-3">
+			Loading Results...
+		</span>
+	</div>
+	<div class="container p-2">
+		<div class="content">
+			<h1 class="is-size-1">
+				Overall
+			</h1>
+			<h2 class="is-size-3">
+				Performance
+			</h2>
+			<div id="overall-performance" class="column is-half is-offset-one-quarter"></div>
+			<h2 class="is-size-3">
+				Accuracy
+			</h2>
+			<div id="overall-accuracy" class="column is-half is-offset-one-quarter"></div>
+		</div>
+		<div class="content">
+			<h1 class="is-size-1">
+				Subject-wise
+			</h1>
+			<h2 class="is-size-3">
+				Performance
+			</h2>
+			<div id="subjects-performance-container" class="columns is-multiline"></div>
+			<h2 class="is-size-3">
+				Accuracy
+			</h2>
+			<div id="subjects-accuracy-container" class="columns is-multiline"></div>
+		</div>
+	</div>
+	<script>
+		load("[[result-id]]");
+	</script>
+</body>
+</html>

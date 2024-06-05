@@ -1,0 +1,5 @@
+.space
+env/
+.VSCodeCounter/
+__pycache__/
+.env

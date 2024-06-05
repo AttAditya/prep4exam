@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	[[meta]]
+
+	<link rel="stylesheet" href="/res/stylesheets/main.css">
+	<link rel="stylesheet" href="/res/stylesheets/exam-ui.css">
+	<link rel="stylesheet" href="/res/stylesheets/extenstions.css">
+
+	<script src="/res/scripts/exam-ux.js"></script>
+</head>
+<body class="has-navbar-fixed pt-6">
+	<div class="pageloader is-link is-active" id="loading-screen">
+		<span class="title has-text-centered is-size-4" id="loading-screen-data">
+			Loading Test...
+		</span>
+	</div>
+	<nav class="navbar has-background-grey-light is-fixed-top">
+		<div class="navbar-brand p-0">
+			<figure class="image navbar-item">
+				<img draggable="false" src="/res/icons/P4E.png" alt="P4E" style="mix-blend-mode: multiply; filter: contrast(1);">
+			</figure>
+		</div>
+	</nav>
+	<div class="box m-2 p-2">
+		<div class="columns is-vcentered p-2 is-gapless">
+			<span class="column p-0 m-0 is-four-fifths is-flex hscroll" id="tabs"></span>
+			<span class="column has-text-right mr-2 p-0 m-0">
+				Time: <span id="time-left">-:--:--</span>
+			</span>
+		</div>
+	</div>
+	<section class="p-4 section is-large">
+		<div class="columns p-2">
+			<div class="column is-8 p-4">
+				<div class="columns p-0 is-vcentered m-0">
+					<h1 class="column heading is-size-6 has-text-weight-bold p-0 m-0">
+						Question <span id="question-number">1</span>
+					</h1>
+					<div class="column p-0 m-0 is-narrow">
+						<button class="button is-small is-danger m-0 p-1">
+							Report Question
+						</button>
+					</div>
+				</div>
+				<hr class="mt-2">
+				<div class="content m-0 p-0">
+					<span id="question"></span>
+					<div id="questions-images"></div>
+					<div class="p-2 columns is-multiline mt-2" id="answer"></div>
+				</div>
+				<hr class="my-2">
+				<div class="p-2 columns is-gapless">
+					<div class="column">
+						<button class="button m-2" onclick="prev_question();">
+							Previous
+						</button>
+						<button id="mark-button" class="button m-2 is-info" onclick="mark_for_review();">
+							Mark for Review
+						</button>
+						<button class="button m-2 is-warning" onclick="clear_response();">
+							Clear Response
+						</button>
+						<button class="button m-2" onclick="next_question();">
+							Next
+						</button>
+					</div>
+					<div class="column is-narrow">
+						<button class="button m-2 is-success" onclick="submit_screen();">
+							Submit
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="column is-4 p-5">
+				<div class="box">
+					<h1 class="heading has-text-weight-bold p-0 m-0">
+						Questions
+					</h1>
+					<div class="m-2 p-2 notification is-danger has-text-weight-bold is-size-7 has-text-centered is-hidden" id="max-attempt-warn">Maximum number of questions attempted for this section!</div>
+					<hr class="my-2">
+					<div class="m-0 columns is-multiline is-gapless">
+						<span class="column m-0 mt-1 p-0 is-half is-size-7" style="display: flex; align-items: center;"><button id="count-1" class="button is-small p-3 m-0 mr-2">00</button>Not Seen</span>
+						<span class="column m-0 mt-1 p-0 is-half is-size-7" style="display: flex; align-items: center;"><button id="count-2" class="button is-small p-3 m-0 mr-2 is-danger">00</button>Not Attempted</span>
+						<span class="column m-0 mt-1 p-0 is-half is-size-7" style="display: flex; align-items: center;"><button id="count-3" class="button is-small p-3 m-0 mr-2 is-success">00</button>Attempted</span>
+						<span class="column m-0 mt-1 p-0 is-half is-size-7" style="display: flex; align-items: center;"><button id="count-4" class="button is-small p-3 m-0 mr-2 is-warning">00</button>Marked for Review</span>
+						<span class="column m-0 mt-1 p-0 is-half is-size-7" style="display: flex; align-items: center;"><button id="count-5" class="button is-small p-3 m-0 mr-2 is-info">00</button>Attempted and Marked for Review</span>
+					</div>
+					<hr class="my-2">
+					<div class="m-0 columns buttons is-multiline is-gapless are-small" id="questions-buttons"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		load("[[course]]", "[[token]]", "[[hours]]", "[[minutes]]", "[[seconds]]");
+	</script>
+</body>
+</html>

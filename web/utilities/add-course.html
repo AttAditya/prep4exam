@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	[[meta]]
+	
+	<title>Add Course</title>
+
+	<link rel="stylesheet" href="/res/stylesheets/main.css">
+
+	<script src="/res/scripts/add-course.js"></script>
+</head>
+<body>
+	<div class="hero is-fullheight">
+		<div class="hero-body">
+			<div class="column box">
+				<div class="has-text-centered p-4">
+					<h1 class="title is-size-1 m-0 mb-2" id="heading">
+						New Course
+					</h1>
+					<h2 class="subtitle is-size-6 m-0" id="description">
+						Create a new test course...
+					</h2>
+					<div class="my-5"></div>
+					<div class="field has-addons">
+						<div class="control">
+							<button disabled class="button is-black is-family-monospace">
+								Name
+							</button>
+						</div>
+						<div class="control is-expanded">
+							<input type="text" class="input" id="course-name" placeholder="Course Name">
+						</div>
+					</div>
+					<div class="field has-addons has-addons-centered">
+						<div class="control">
+							<button disabled class="button is-black is-family-monospace">
+								Duration
+							</button>
+						</div>
+						<div class="control">
+							<input class="input" type="number" id="course-hours" placeholder="Hours" value="1" min="0" max="23" step="1">
+						</div>
+						<div class="control">
+							<input class="input" type="number" id="course-minutes" placeholder="Minutes" value="0" max="59" min="0" step="1">
+						</div>
+						<div class="control">
+							<input class="input" type="number" id="course-seconds" placeholder="Seconds" value="0" max="59" min="0" step="1">
+						</div>
+					</div>
+					<div id="subject-selection" class="box"></div>
+					<div class="field has-addons has-addons-centered">
+						<div class="control">
+							<div class="select">
+								<select id="mode-select">
+									<option value="objective">Objective</option>
+									<option value="subjective">Subjective</option>
+								</select>
+							</div>
+						</div>
+						<div class="control">
+							<div class="select">
+								<select id="subject-select"></select>
+								<script>
+									load_subs("subject-select");
+								</script>
+							</div>
+						</div>
+						<div class="control">
+							<button class="button is-info" onclick="add_sub();">
+								<i class="fa-solid fa-plus"></i>
+								<span class="ml-2">
+									Add Subject
+								</span>
+							</button>
+						</div>
+					</div>
+					<button class="button is-success" onclick="create_course();">
+						<i class="fa-solid fa-check"></i>
+						<span class="ml-2">
+							Create
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
